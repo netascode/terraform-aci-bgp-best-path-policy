@@ -21,9 +21,9 @@ resource "aci_rest_managed" "fvTenant" {
 module "main" {
   source = "../.."
 
-  name = "TEST_FULL"
-  tenant = aci_rest_managed.fvTenant.content.name
-  description = "My BGP Best Path Policy"
+  name         = "TEST_FULL"
+  tenant       = aci_rest_managed.fvTenant.content.name
+  description  = "My BGP Best Path Policy"
   control_type = "multi-path-relax"
 }
 

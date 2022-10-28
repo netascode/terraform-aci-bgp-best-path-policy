@@ -35,7 +35,7 @@ variable "control_type" {
   default     = ""
 
   validation {
-    condition = var.control_type == "" || var.control_type == "multi-path-relax"
+    condition     = var.control_type == "" || var.control_type == "multi-path-relax"
     error_message = "Allowed value: `multi-path-relax`."
   }
 }

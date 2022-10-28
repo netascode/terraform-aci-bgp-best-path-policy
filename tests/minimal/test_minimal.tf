@@ -21,7 +21,7 @@ resource "aci_rest_managed" "fvTenant" {
 module "main" {
   source = "../.."
 
-  name = "TEST_MINIMAL"
+  name   = "TEST_MINIMAL"
   tenant = aci_rest_managed.fvTenant.content.name
 }
 
