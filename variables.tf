@@ -1,5 +1,5 @@
 variable "tenant" {
-  description = "BGP Best Path Policy's Tenant name."
+  description = "Tenant name."
   type        = string
 
   validation {
@@ -9,7 +9,7 @@ variable "tenant" {
 }
 
 variable "name" {
-  description = "BGP Best Path Policy name."
+  description = "BGP best path policy name."
   type        = string
 
   validation {
@@ -19,7 +19,7 @@ variable "name" {
 }
 
 variable "description" {
-  description = "BGP Best Path Policy description."
+  description = "BGP best path policy description."
   type        = string
   default     = ""
 
@@ -30,7 +30,7 @@ variable "description" {
 }
 
 variable "control_type" {
-  description = "BGP Best Path Policy Control Type.Allowed value: `multi-path-relax`."
+  description = "BGP best path policy control type. Allowed value: `multi-path-relax`."
   type        = string
   default     = ""
 

@@ -5,5 +5,5 @@ output "dn" {
 
 output "name" {
   value       = aci_rest_managed.bgpBestPathCtrlPol.content.name
-  description = "BGP Best Path Policy Name"
+  description = "BGP best path policy name."
 }

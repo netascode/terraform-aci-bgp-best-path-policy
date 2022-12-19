@@ -1,5 +1,5 @@
 <!-- BEGIN_TF_DOCS -->
-[![Tests](https://github.com/netascode/terraform-aci-bgp-best-path-policy/actions/workflows/test.yml/badge.svg)](https://github.com/netascode/terraform-aci-scaffolding/actions/workflows/test.yml)
+[![Tests](https://github.com/netascode/terraform-aci-bgp-best-path-policy/actions/workflows/test.yml/badge.svg)](https://github.com/netascode/terraform-aci-bgp-best-path-policy/actions/workflows/test.yml)
 
 # Terraform ACI BGP Best Path Policy Module
 
@@ -13,7 +13,7 @@ Location in GUI:
 ```hcl
 module "aci_bgp_best_path_policy" {
   source  = "netascode/bgp-best-path-policy/aci"
-  version = ">= 0.0.1"
+  version = ">= 0.1.0"
 
   name         = "ABC"
   tenant       = "TEN1"
@@ -26,7 +26,7 @@ module "aci_bgp_best_path_policy" {
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.3.0 |
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.0.0 |
 | <a name="requirement_aci"></a> [aci](#requirement\_aci) | >= 2.0.0 |
 
 ## Providers
@@ -39,17 +39,17 @@ module "aci_bgp_best_path_policy" {
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_tenant"></a> [tenant](#input\_tenant) | BGP Best Path Policy's Tenant name. | `string` | n/a | yes |
-| <a name="input_name"></a> [name](#input\_name) | BGP Best Path Policy name. | `string` | n/a | yes |
-| <a name="input_description"></a> [description](#input\_description) | BGP Best Path Policy description. | `string` | `""` | no |
-| <a name="input_control_type"></a> [control\_type](#input\_control\_type) | BGP Best Path Policy Control Type.Allowed value: `multi-path-relax`. | `string` | `""` | no |
+| <a name="input_tenant"></a> [tenant](#input\_tenant) | Tenant name. | `string` | n/a | yes |
+| <a name="input_name"></a> [name](#input\_name) | BGP best path policy name. | `string` | n/a | yes |
+| <a name="input_description"></a> [description](#input\_description) | BGP best path policy description. | `string` | `""` | no |
+| <a name="input_control_type"></a> [control\_type](#input\_control\_type) | BGP best path policy control type. Allowed value: `multi-path-relax`. | `string` | `""` | no |
 
 ## Outputs
 
 | Name | Description |
 |------|-------------|
 | <a name="output_dn"></a> [dn](#output\_dn) | Distinguished name of `bgpBestPathCtrlPol` object. |
-| <a name="output_name"></a> [name](#output\_name) | BGP Best Path Policy Name |
+| <a name="output_name"></a> [name](#output\_name) | BGP best path policy name. |
 
 ## Resources
 
