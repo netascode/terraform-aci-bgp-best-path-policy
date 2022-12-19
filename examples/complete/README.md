@@ -1,5 +1,5 @@
 <!-- BEGIN_TF_DOCS -->
-# Scaffolding Example
+# BGP Best Path Policy Example
 
 To run this example you need to execute:
 
@@ -12,13 +12,14 @@ $ terraform apply
 Note that this example will create resources. Resources can be destroyed with `terraform destroy`.
 
 ```hcl
-module "aci_scaffolding" {
-  source  = "netascode/scaffolding/aci"
+module "aci_bgp_best_path_policy" {
+  source  = "netascode/bgp-best-path-policy/aci"
   version = ">= 0.0.1"
 
-  name        = "ABC"
-  alias       = "ABC-ALIAS"
-  description = "My Description"
+  name         = "ABC"
+  tenant       = "TEN1"
+  description  = "My BGP Best Path Policy"
+  control_type = "multi-path-relax"
 }
 ```
 <!-- END_TF_DOCS -->
